@@ -1,0 +1,1155 @@
+@mixin title {
+  color: #0F2D52;
+  border: 3px solid #0F2D52;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 1vw;
+  padding: 0.7vw 1vw;
+  width: 7vw;
+  text-align: center;
+  font-size: 2vw;
+}
+@mixin line{
+  width: 0.5vw;
+  height: 7vw;
+}
+
+@mixin project-wrap{
+  width: 90vw;
+  height: 35vw;
+  background-color: #ededed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+body {
+  margin: 0;
+  background-color: #4682B4;
+}
+
+// 프로필-----------------------------------------------------------------------
+.profile {
+  margin-top: 4vw;
+
+  .profile-title {
+    @include title();
+  }
+
+  .profile-box {
+    background-color: #fff;
+    width: 73.5vw;
+    height: 35vw;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .profile-left {
+    width: 15vw;
+    height: 30vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 1vw;
+  }
+
+  .profile-img {
+    img {
+      width: 13vw;
+      height: 18vw;
+      object-fit: cover;
+    }
+  }
+
+  .profile-span {
+    font-size: 1vw;
+    display: flex;
+    flex-flow: column;
+    margin-top: 1vw;
+  }
+
+  .profile-p2 {
+    font-size: 0.8vw;
+    display: flex;
+    flex-flow: column;
+    margin-top: 1vw;
+  }
+
+  .profile-middle {
+    display: flex;
+    flex-flow: column;
+    height: 25vw;
+    justify-content: space-between;
+    padding-right: 1vw;
+  }
+
+  .profile-text {
+    display: flex;
+    flex-flow: column;
+    font-size: 1vw;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .profile-text2 {
+    font-size: 1vw;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .profile-right {
+    width: 25vw;
+    height: 27 vw;
+    background-color: tan;
+    margin-right: 1vw;
+
+    section {
+      width: 25vw;
+      height: 27vw;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      font-size: 1vw;
+      background: #fff;
+      overflow: hidden;
+
+      &-image {
+        position: absolute;
+        top: -200px;
+        left: -200px;
+        width: calc(100% + 400px);
+        height: calc(100% + 400px);
+        background-position: 50% 50%;
+        background-size: cover;
+      }
+
+      &-title {
+        font-size: 1vw;
+        line-height: 1;
+        max-width: 50%;
+        white-space: normal;
+        word-break: break-word;
+        color: #FFF;
+        z-index: 100;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+
+        @media (min-width: 45em) {
+          font-size: 4vw;
+          max-width: none;
+        }
+
+        span {
+          white-space: pre;
+          display: inline-block;
+          opacity: 0;
+        }
+      }
+    }
+
+    .slideshow {
+      position: relative;
+
+      &-pagination {
+        position: absolute;
+        bottom: 5rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transition: .3s opacity;
+        z-index: 10;
+
+        &-item {
+          display: flex;
+          align-items: center;
+
+          .pagination-number {
+            opacity: 0.5;
+          }
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+          }
+
+          &:last-of-type {
+            .pagination-separator {
+              width: 0;
+            }
+          }
+
+          &.active {
+            .pagination-number {
+              opacity: 1;
+            }
+
+            .pagination-separator {
+              width: 10vw;
+            }
+
+            //.pagination-separator-loader {
+            //  transform: scaleX(1);
+            //  transition: all 3s ease;
+            //}
+          }
+        }
+      }
+
+      &-navigation {
+        &-button {
+          position: absolute;
+          top: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 3vw;
+          z-index: 1000;
+          transition: all .3s ease;
+          color: #FFF;
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            background: rgba(#000, 0.5);
+          }
+
+          &.prev {
+            left: 0;
+          }
+
+          &.next {
+            right: 0;
+          }
+        }
+      }
+
+    }
+
+
+    .pagination-number {
+      font-size: 1.5vw;
+      color: #FFF;
+      font-family: 'Oswald', sans-serif;
+      padding: 0 0.5rem;
+    }
+
+    .pagination-separator {
+      display: none;
+
+      @media (min-width: 45em) {
+        display: block;
+      }
+
+      position: relative;
+      width: 40px;
+      height: 2px;
+      background: rgba(#FFFFFF, 0.25);
+      transition: all .3s ease;
+
+      &-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        transform-origin: 0 0;
+        //transform: scaleX(0);
+        //transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .caption {
+    background: rgba(70, 130, 180, 0.7);
+    padding: 1vw 1.5vw;
+    border-radius: 3vw;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    backdrop-filter: blur(3px);
+    font-size: 0.8vw;
+  }
+}
+
+
+// 스킬 ----------------------------------------------
+.skill {
+  height: 25vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 70vw;
+
+  .flip-card {
+    width: 10vw;
+    height: 10vw;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  .flip-card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    border: 0.3vw solid #fff;
+    color: white;
+  }
+
+  .front {
+    object-fit: cover;
+    width: 18vw;
+    height: 14.8vw;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .back {
+    background-color: rgba(70, 130, 180, 0.7);
+    transform: rotateY(180deg);
+    width: 16.1vw;
+    height: 12.8vw;
+    margin-left: -8.6vw;
+    margin-top: 0vw;
+    border: 0.3vw solid #fff;
+    padding: 1vw;
+    font-size: 1vw;
+    
+  }
+
+  .skill-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 65vw;
+
+    img {
+      width: 10vw;
+      height: 10vw;
+
+
+
+      border-right: none;
+    }
+
+
+  }
+
+  .skill-flex2 {
+    display: flex;
+    justify-content: space-between;
+    width: 65vw;
+
+    img {
+      width: 10vw;
+      height: 10vw;
+      border-right: none;
+    }
+  }
+
+}
+
+.skill-title {
+  @include title();
+  
+}
+
+
+// 프로젝트 ----------------------------------------------
+
+.project-text {
+  @include title();
+  margin-top: 20vw;
+
+}
+
+.project {
+  margin-top: 15vw;
+  
+  .project-wrap {
+    @include project-wrap();
+  }
+
+  .scroll-box {
+    width: 50vw;
+    height: 30vw;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 2vw;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  .project-banner {
+    width: 20vw;
+    height: 35vw;
+    background-color: #fff;
+  }
+
+  .project-line-box {
+    width: 20vw;
+    height: 7vw;
+    margin-left: 3.5vw;
+
+    .project-line {
+      width: 0.5vw;
+      height: 7vw;
+      background-color: #87CEEB;
+    }
+  }
+
+  .project-middle {
+    display: flex;
+    flex-flow: column;
+    height: 25vw;
+    justify-content: space-around;
+    .project-no {
+      font-size: 4vw;
+      font-weight: bold;
+    }
+
+    .project-title {
+      font-size: 1.5vw;
+    }
+
+    .project-title2 {
+      font-size: 1.5vw;
+      font-weight: bold;
+    }
+
+    .project-title-flex {
+      display: flex;
+      flex-flow: column;
+      
+    }
+
+    .project-color-flex {
+      display: flex;
+      flex-flow: column;
+      
+    }
+
+    .project-color {
+      font-size: 1.5vw;
+    }
+
+    .project-color-round {
+      display: flex;
+
+      div {
+        width: 1.5vw;
+        height: 1.5vw;
+        border-radius: 100%;
+        border: 1px #333 solid;
+        margin-right: 0.5vw;
+        margin-top: 0.5vw;
+      }
+    }
+
+    .project-p {
+      font-size: 1vw;
+      p{
+        margin-top: 1vw;
+      }
+    }
+
+// 버튼----------------------------
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+    @mixin button($bcolor,
+      $url,
+      $x1,
+      $y1,
+      $bor,
+      $col) {
+      background: $bcolor;
+      -webkit-mask: url($url);
+      mask: url($url);
+      -webkit-mask-size: $x1 $y1;
+      mask-size: $x1 $y1;
+      border: $bor;
+      color: $col;
+    }
+
+
+
+    
+
+    .button-container-1 {
+      position: relative;
+      width: 5vw;
+      height: 2.5vw;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 1vw;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 0.5vw;
+      border: 1px #87CEEB solid;
+      button {
+        width: 5vw;
+        height: 2.5vw;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 1vw;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        @include button(#87CEEB,
+          "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+          2300%,
+          100%,
+          none,
+          #fff);
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+          -webkit-animation: ani 0.7s steps(22) forwards;
+          animation: ani 0.7s steps(22) forwards;
+        }
+      }
+    }
+
+
+
+
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 5vw;
+      height: 2.5vw;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      position: absolute;
+      font-size: 1vw;
+      margin-top: 0.6vw;
+      overflow: hidden;
+      font-weight: bold;
+
+    }
+
+
+
+    @keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+  }
+
+
+
+}
+// ------------------------------------------------
+
+
+
+
+
+
+
+
+.project-line1{
+  @include line();
+  background-color: #6495ED;
+}
+
+@mixin button{
+  
+}
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+    @mixin button($bcolor,
+      $url,
+      $x1,
+      $y1,
+      $bor,
+      $col) {
+      background: $bcolor;
+      -webkit-mask: url($url);
+      mask: url($url);
+      -webkit-mask-size: $x1 $y1;
+      mask-size: $x1 $y1;
+      border: $bor;
+      color: $col;
+    }
+
+
+
+    
+
+    .button-container-2 {
+      position: relative;
+      width: 5vw;
+      height: 2.5vw;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 1vw;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 0.5vw;
+      border: 1px #6495ED solid;
+      button {
+        width: 5vw;
+        height: 2.5vw;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 1vw;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        @include button(#6495ED,
+          "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+          2300%,
+          100%,
+          none,
+          #fff);
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+          -webkit-animation: ani 0.7s steps(22) forwards;
+          animation: ani 0.7s steps(22) forwards;
+        }
+      }
+    }
+
+
+
+
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 5vw;
+      height: 2.5vw;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      position: absolute;
+      font-size: 1vw;
+      margin-top: 0.6vw;
+      overflow: hidden;
+      font-weight: bold;
+
+    }
+
+
+
+    @keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+  
+
+
+  .project-button-flex{
+    width: 11vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    a{
+      color: #fff;
+    }
+  }
+
+
+
+  .project-wrap2{
+    @include project-wrap();
+    flex-flow: row-reverse;
+  }
+
+
+
+  .project-line3{
+    @include line();
+    background-color: #B81C22;
+  }
+
+
+  @mixin button{
+  
+}
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+    @mixin button($bcolor,
+      $url,
+      $x1,
+      $y1,
+      $bor,
+      $col) {
+      background: $bcolor;
+      -webkit-mask: url($url);
+      mask: url($url);
+      -webkit-mask-size: $x1 $y1;
+      mask-size: $x1 $y1;
+      border: $bor;
+      color: $col;
+    }
+
+
+
+    
+
+    .button-container-3 {
+      position: relative;
+      width: 5vw;
+      height: 2.5vw;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 1vw;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 0.5vw;
+      border: 1px #B81C22 solid;
+      button {
+        width: 5vw;
+        height: 2.5vw;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 1vw;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        @include button(#B81C22,
+          "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+          2300%,
+          100%,
+          none,
+          #fff);
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+          -webkit-animation: ani 0.7s steps(22) forwards;
+          animation: ani 0.7s steps(22) forwards;
+        }
+      }
+    }
+
+
+
+
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 5vw;
+      height: 2.5vw;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      position: absolute;
+      font-size: 1vw;
+      margin-top: 0.6vw;
+      overflow: hidden;
+      font-weight: bold;
+
+    }
+
+
+
+    @keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+    .project-text2{
+    @include title();
+    width:15vw;
+    
+    }
+
+    .project-line4{
+      @include line();
+      background-color: #FC8621;
+    }
+
+
+
+  @mixin button{
+  
+}
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+    @mixin button($bcolor,
+      $url,
+      $x1,
+      $y1,
+      $bor,
+      $col) {
+      background: $bcolor;
+      -webkit-mask: url($url);
+      mask: url($url);
+      -webkit-mask-size: $x1 $y1;
+      mask-size: $x1 $y1;
+      border: $bor;
+      color: $col;
+    }
+
+
+
+    
+
+    .button-container-4 {
+      position: relative;
+      width: 5vw;
+      height: 2.5vw;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 1vw;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 0.5vw;
+      border: 1px #FC8621 solid;
+      button {
+        width: 5vw;
+        height: 2.5vw;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 1vw;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        @include button(#FC8621,
+          "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+          2300%,
+          100%,
+          none,
+          #fff);
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+          -webkit-animation: ani 0.7s steps(22) forwards;
+          animation: ani 0.7s steps(22) forwards;
+        }
+      }
+    }
+
+
+
+
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 5vw;
+      height: 2.5vw;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      position: absolute;
+      font-size: 1vw;
+      margin-top: 0.6vw;
+      overflow: hidden;
+      font-weight: bold;
+
+    }
+
+
+
+    @keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+
+
+    .project-text3{
+      @include title();
+      
+      width: 20vw;
+    }
+
+
+    .project-line5{
+      @include line();
+      background-color:#D7BDE2;
+    }
+
+
+      @mixin button{
+  
+}
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+    @mixin button($bcolor,
+      $url,
+      $x1,
+      $y1,
+      $bor,
+      $col) {
+      background: $bcolor;
+      -webkit-mask: url($url);
+      mask: url($url);
+      -webkit-mask-size: $x1 $y1;
+      mask-size: $x1 $y1;
+      border: $bor;
+      color: $col;
+    }
+
+
+
+    
+
+    .button-container-5 {
+      position: relative;
+      width: 5vw;
+      height: 2.5vw;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 1vw;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 0.5vw;
+      border: 1px #D7BDE2 solid;
+      button {
+        width: 5vw;
+        height: 2.5vw;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 1vw;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        @include button(#D7BDE2,
+          "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+          2300%,
+          100%,
+          none,
+          #fff);
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+          -webkit-animation: ani 0.7s steps(22) forwards;
+          animation: ani 0.7s steps(22) forwards;
+        }
+      }
+    }
+
+
+
+
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 5vw;
+      height: 2.5vw;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      position: absolute;
+      font-size: 1vw;
+      margin-top: 0.6vw;
+      overflow: hidden;
+      font-weight: bold;
+
+    }
+
+
+
+    @keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+
+    .project-text4{
+      @include title();
+      
+      width: 17vw;
+    }
+    .project-text5{
+        @include title();
+        width: 10vw;
+    }
+    
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.project {
+  scroll-snap-align: start;
+   scroll-snap-align: center;
+}
+
+.finish-wrap{
+  width: 75vw;
+  height: 35vw;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 5vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.finish-flex{
+  display: flex;
+  width: 75vw;
+  justify-content: space-evenly;
+}
+.finish-box{
+  width: 18vw;
+  height: 10vw;
+  background-color: #6495ED;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 1vw;
+    img{
+      width: 5vw;
+      height: 5vw;
+    }
+
+    span{
+      color: #fff;
+      font-size: 2.5vw;
+      border-bottom: 0.2vw solid #fff;
+    }
+}
+
+.finish-h2{
+  font-size: 4.5vw;
+  color: #6495ED;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.finish-footer{
+  width: 75vw;
+  height: 5vw;
+  background-color: #d9d9d9;
+}
+.finish-box:hover{
+  transform: rotateY(180deg);
+}
+.finish-box-inner{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1vw;
+      font-family: sans-serif;
+      border-radius: 1vw;
+      color: white;
+}
+.re{
+  object-fit: cover;
+  width: 18vw;
+  height: 10vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+.de{
+  background-color: #0F2D52;
+  transform: rotateY(180deg);
+  width: 18vw;
+  height: 10vw;
+}
+

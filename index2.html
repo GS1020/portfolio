@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGS-PortFolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+    <script>!function (e) { "undefined" == typeof module ? this.charming = e : module.exports = e }(function (e, n) { "use strict"; n = n || {}; var t = n.tagName || "span", o = null != n.classPrefix ? n.classPrefix : "char", r = 1, a = function (e) { for (var n = e.parentNode, a = e.nodeValue, c = a.length, l = -1; ++l < c;) { var d = document.createElement(t); o && (d.className = o + r, r++), d.appendChild(document.createTextNode(a[l])), n.insertBefore(d, e) } n.removeChild(e) }; return function c(e) { for (var n = [].slice.call(e.childNodes), t = n.length, o = -1; ++o < t;)c(n[o]); e.nodeType === Node.TEXT_NODE && a(e) }(e), e });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css'>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- body 구름 div -->
+    <div id="particles-js"></div>
+    <div class="animated-title"></div>
+
+    <div class="wrap">
+        <!-- 프로필 -->
+        <div class="container">
+            <div class="project">
+                <div class="profile">
+                    <h2 class="profile-title">Profile</h2>
+                    <div class="profile-box">
+                        <div class="profile-left">
+                            <div class="profile-img">
+                                <img src="img/박성한.jpg" alt="profileimg">
+                            </div>
+                            <div class="profile-span">
+                                <span style="font-size: 1.2vw; font-weight: bold;">한 길 수</span>
+                                <span>Han GilSu</span>
+                            </div>
+                            <div class="profile-p2">
+                                <span>Birthday - 1992.10.20</span>
+                                <span >Address - 경기도 평택시 이충동</span>
+                                <span>Email - ooyopw123@naver.com</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-middle">
+                            <div class="profile-text2">
+                                <p>2025.02.24 ~ 2025.07.18</p>
+                                <p>MBC 아카데미 컴퓨터 교육센터 수료</p>
+                                <p>웹디자인 기능사 취득</p>
+                                <p>웹 사이트 디자인 & 제작</p>
+                                <p>웹 표준/접근성을 준수한 HTML, CSS 코딩</p>
+                                <p>jQuery / Java Script / React / Scss 활용</p>
+                            </div>
+
+                            <div class="profile-text">
+                                <span style="border-bottom: 0.2vw solid #333;">Favorites</span>
+                                <span style="margin-top: 0.3vw;">야구, 여행, 음악, 사진</span>
+                            </div>
+                            <span class="caption">사진찍기가 취미라 슬라이더로 만들어봤습니다 ➜</span>
+                        </div>
+
+                        <div class="profile-right">
+                            <section>
+
+                                <div class="swiper-container slideshow">
+
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide slide">
+                                            <div class="slide-image" style="background-image: url(/img/제주귤.jpg)">
+                                            </div>
+                                            <span class="slide-title">JEJU ISLAND</span>
+                                        </div>
+
+                                        <div class="swiper-slide slide">
+                                            <div class="slide-image" style="background-image: url(/img/후쿠오카해변.jpg)">
+                                            </div>
+                                            <span class="slide-title">MOMOCHI</span>
+                                        </div>
+
+                                        <div class="swiper-slide slide">
+                                            <div class="slide-image" style="background-image: url(/img/타워야경.jpg)">
+                                            </div>
+                                            <span class="slide-title">Fukuoka</span>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="slideshow-pagination"></div>
+
+                                    <div class="slideshow-navigation">
+                                        <div class="slideshow-navigation-button prev"><span
+                                                class="fas fa-chevron-left"></span></div>
+                                        <div class="slideshow-navigation-button next"><span
+                                                class="fas fa-chevron-right"></span></div>
+                                    </div>
+
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 스킬 -->
+            <div class="project">
+                <h2 class="skill-title">SKILL</h2>
+                <div class="skill">
+
+                    <div class="skill-flex">
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/html.svg" alt="html">
+                            </div>
+                            <div class="flip-card-inner back">
+                                HTML 구조와 활용에 능숙하며, 다양한 상황에 맞게 자유롭게 구현할 수 있습니다.
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/css.svg" alt="css">
+                            </div>
+                            <div class="flip-card-inner back">
+                                다양한 화면 크기에 유연하게 대응하는 CSS 레이아웃(Flexbox) 및 미디어 쿼리 사용에 익숙합니다.
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/javascript.png" alt="java">
+                            </div>
+                            <div class="flip-card-inner back">
+                                JavaScript의 기본 문법과 DOM 제어, 이벤트 처리 등을 활용해 동적인 웹 기능을 구현할 수 있습니다.
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/jquery.svg" alt="jquery">
+                            </div>
+                            <div class="flip-card-inner back">
+                                jQuery를 이용한 이벤트 처리, 슬라이더, 모달창 등의 인터랙션 요소 구현에 익숙합니다.
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-flex2">
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/figma.svg" alt="figma">
+                            </div>
+                            <div class="flip-card-inner back">
+                                Figma를 활용해 와이어프레임부터 UI 디자인, 프로토타이핑까지 수행할 수 있으며, 협업을 위한 컴포넌트 정리와 공유 경험도 보유하고 있습니다.
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/react.svg" alt="react">
+                            </div>
+                            <div class="flip-card-inner back">
+                                React를 활용해 개인 홈페이지를 제작한 경험이 있으며, 팀 프로젝트에서도 React를 기반으로 구현 작업을 수행했습니다.
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/scss.svg" alt="scss">
+                            </div>
+                            <div class="flip-card-inner back">
+                                SCSS를 사용한 프로젝트 경험이 있으며, 현재 포트폴리오 홈페이지도 SCSS를 기반으로 스타일을 구성하였습니다.
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner front">
+                                <img src="img/github.svg" alt="git">
+                            </div>
+                            <div class="flip-card-inner back">
+                                Git을 활용한 개인 프로젝트의 버전 관리 경험이 있으며, 협업 도구인 GitHub에 대한 이해와 활용 능력도 확장해 나가고 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 프로젝트 -->
+
+
+        <div class="project">
+            <div class="container">
+                <h2 class="project-text">React</h2>
+            </div>
+            <div class="project-wrap">
+                <div class="scroll-box" id="scrollBox">
+                    <img src="img/pro3.png" alt="pro3">
+                </div>
+
+
+                <div class="project-banner">
+
+                    <div class="project-line-box">
+                        <div class="project-line">
+
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-middle">
+                            <span class="project-no">01</span>
+
+
+                            <div class="project-title-flex">
+                                <span class="project-title">아디다스</span>
+                                <span class="project-title2">Adidas</span>
+                            </div>
+
+
+                            <div class="project-color-flex">
+                                <span class="project-color">Color</span>
+                                <div class="project-color-round">
+                                    <div style="background-color: #fff;"></div>
+                                    <div style="background-color: black;"></div>
+                                </div>
+                            </div>
+
+                            <div class="project-p">
+                                <p>신발, 스포츠용품 등 을 판매하고 있는 아디다스 공식 홈페이지입니다.</p>
+                                <p>리액트, 부트스트랩을 사용해서 아디다스 홈페이지를 구현해 봤습니다.</p>
+                            </div>
+
+                            <div class="project-button-flex">
+                                <div class="button-container-1">
+                                    <span class="mas">MAIN</span>
+                                    <button id='work' type="button" name="Hover">MAIN</button>
+                                </div>
+                                <div class="button-container-1">
+                                    <span class="mas">PDF</span>
+                                    <button id='work2' type="button" name="Hover1">PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="project">
+            <div class="container">
+                <h2 class="project-text5">Open Api</h2>
+            </div>
+            <div class="project-wrap2">
+                <div class="scroll-box" id="scrollBox">
+                    <img src="img/pro4.png" alt="pro4">
+                </div>
+
+
+                <div class="project-banner">
+
+                    <div class="project-line-box">
+                        <div class="project-line1">
+
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-middle">
+                            <span class="project-no">02</span>
+
+
+                            <div class="project-title-flex">
+                                <span class="project-title">영풍문고</span>
+                                <span class="project-title2">YP BOOKS</span>
+                            </div>
+
+
+                            <div class="project-color-flex">
+                                <span class="project-color">Color</span>
+                                <div class="project-color-round">
+                                    <div style="background-color: #6495ED"></div>
+                                    <div style="background-color: #fff"></div>
+                                </div>
+                            </div>
+
+                            <div class="project-p">
+                                <p>다양한 종류의 책을 판매 하고있는 영풍문고 홈페이지 입니다.</p>
+                                <p>카카오 오픈 API와 SWIPE를 이용해서 영풍문고 홈페이지를 구현해 봤습니다.</p>
+                            </div>
+
+                            <div class="project-button-flex">
+                                <div class="button-container-2">
+                                    <span class="mas">MAIN</span>
+                                    <button id='work3' type="button" name="Hover2">MAIN</button>
+                                </div>
+                                <div class="button-container-2">
+                                    <span class="mas">PDF</span>
+                                    <button id='work4' type="button" name="Hover3">PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="project">
+            <div class="container">
+                <h2 class="project-text2">Team-Project</h2>
+            </div>
+            <div class="project-wrap">
+                <div class="scroll-box" id="scrollBox">
+                    <img src="img/teampro.png" alt="teampro">
+                </div>
+
+
+                <div class="project-banner">
+
+                    <div class="project-line-box">
+                        <div class="project-line3">
+
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-middle">
+                            <span class="project-no">03</span>
+
+
+                            <div class="project-title-flex">
+                                <span class="project-title">힐스테이트</span>
+                                <span class="project-title2">Hillstate</span>
+                            </div>
+
+
+                            <div class="project-color-flex">
+                                <span class="project-color">Color</span>
+                                <div class="project-color-round">
+                                    <div style="background-color: #fff;"></div>
+                                    <div style="background-color: #B81C22"></div>
+                                </div>
+                            </div>
+
+                            <div class="project-p">
+                                <p>팀프로젝트로 팀원들과 함께 작업한 힐스테이트 주차장 관리 홈페이지입니다.</p>
+                                <p>리액트를 사용했고 차량 등록, 차량조회,주차장 위치 등 을 구현해 봤습니다.</p>
+                            </div>
+
+                            <div class="project-button-flex">
+                                <div class="button-container-3">
+                                    <span class="mas">MAIN</span>
+                                    <button id='work5' type="button" name="Hover">MAIN</button>
+                                </div>
+                                <div class="button-container-3">
+                                    <span class="mas">PDF</span>
+                                    <button id='work6' type="button" name="Hover1">PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="project">
+            <div class="container">
+                <h2 class="project-text3">Responsive-Design</h2>
+            </div>
+            <div class="project-wrap2">
+                <div class="scroll-box" id="scrollBox">
+                    <img src="img/pro2.png" alt="pro2">
+                </div>
+
+
+                <div class="project-banner">
+
+                    <div class="project-line-box">
+                        <div class="project-line4">
+
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-middle">
+                            <span class="project-no">04</span>
+
+
+                            <div class="project-title-flex">
+                                <span class="project-title">뉴욕</span>
+                                <span class="project-title2">About NewYork</span>
+                            </div>
+
+
+                            <div class="project-color-flex">
+                                <span class="project-color">Color</span>
+                                <div class="project-color-round">
+                                    <div style="background-color: #FC8621"></div>
+                                    <div style="background-color: #fff"></div>
+                                </div>
+                            </div>
+
+                            <div class="project-p">
+                                <p>뉴욕에 있는 맛집, 유명한 장소,행사 등 을 알려주는 홈페이지입니다.</p>
+                                <p>반응형과 미디어 쿼리를 사용해서뉴욕 소개 홈페이지를 구현해 보았습니다.</p>
+                            </div>
+
+                            <div class="project-button-flex">
+                                <div class="button-container-4">
+                                    <span class="mas">MAIN</span>
+                                    <button id='work7' type="button" name="Hover2">MAIN</button>
+                                </div>
+                                <div class="button-container-4">
+                                    <span class="mas">PDF</span>
+                                    <button id='work8' type="button" name="Hover3">PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="project">
+            <div class="container">
+                <h2 class="project-text4">Web-Standards</h2>
+            </div>
+            <div class="project-wrap">
+                <div class="scroll-box" id="scrollBox">
+                    <img src="img/pro1.png" alt="pro1">
+                </div>
+
+
+                <div class="project-banner">
+
+                    <div class="project-line-box">
+                        <div class="project-line5">
+
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-middle">
+                            <span class="project-no">05</span>
+
+
+                            <div class="project-title-flex">
+                                <span class="project-title">캐논</span>
+                                <span class="project-title2">Cannon</span>
+                            </div>
+
+
+                            <div class="project-color-flex">
+                                <span class="project-color">Color</span>
+                                <div class="project-color-round">
+                                    <div style="background-color: #fff;"></div>
+                                    <div style="background-color: black"></div>
+                                </div>
+                            </div>
+
+                            <div class="project-p">
+                                <p>카메라와 카메라에 필요한 엑세사리 등 을 판매하는 홈페이지입니다.</p>
+                                <p>캐논 홈페이지는 웹 표준에만 준수해서 제작을 해본 제 첫번째 홈페이지입니다.</p>
+                            </div>
+
+                            <div class="project-button-flex">
+                                <div class="button-container-5">
+                                    <span class="mas">MAIN</span>
+                                    <button id='work9' type="button" name="Hover">MAIN</button>
+                                </div>
+                                <div class="button-container-5">
+                                    <span class="mas">PDF</span>
+                                    <button id='work10' type="button" name="Hover1">PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 마지막 멘트 -->
+        <div class="project">
+            <div class="container">
+                <h2 class="project-text">Finish</h2>
+            </div>
+            <div class="finish-wrap">
+                <h2 class="finish-h2">Thank you for Watching!</h2>
+                <div class="finish-flex">
+                    <div class="finish-box">
+                        <div class="finish-box-inner re">
+                        <span>E-mail</span>
+                        <img src="img/email.png" alt="email">
+                        </div>
+                        <div class="finish-box-inner de">
+                            <p>ooyopw123@naver.com</p>
+                        </div>                       
+                    </div>
+                    <div class="finish-box">
+                        <div class="finish-box-inner re">
+                        <span>Git-Hub</span>
+                        <img src="img/github.svg" alt="github">
+                        </div>
+                        <div class="finish-box-inner de">
+                            <p>https://github.com/GS1020</p>
+                        </div>
+                    </div>
+                    <div class="finish-box">
+                        <div class="finish-box-inner re">
+                            <span>Kakao</span>
+                            <img src="img/kakao.png" alt="kakao">
+                        </div>
+
+                        <div class="finish-box-inner de">
+                            <p>ooyopw123@naver.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="finish-footer">
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
