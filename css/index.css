@@ -925,3 +925,25 @@ body {
   width: 18vw;
   height: 10vw;
 }
+
+.top {
+  width: 5vw;
+  height: 5vw;
+  position: fixed;
+  top: 85%;
+  right: 0;
+  margin-right: 4.5vw;
+  border-radius: 10vw;
+}
+
+.top-button {
+  background-color: #fff;
+  border: none;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 3vw;
+  font-size: 1vw;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0.1vw solid #4682B4;
+}

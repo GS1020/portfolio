@@ -282,6 +282,12 @@ const slideshow = new Slideshow(document.querySelector('.slideshow'));
     window.open("https://gs1020.github.io/firsr-project/한길수_project_1.pdf", "_blank");
   });
 
+$(document).ready(function () {
+  $('.top-button').on('click', function (e) {
+    e.preventDefault(); 
+    $('html, body').stop().animate({ scrollTop: 0 }, 500);
+  });
+});
 
   
 
